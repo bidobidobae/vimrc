@@ -1,3 +1,27 @@
+" Inisialisasi vim-plug
+call plug#begin('~/.vim/plugged')
+
+" Daftar plugin yang akan diinstal
+Plug 'tpope/vim-rails'       " Ruby on Rails support
+Plug 'vim-ruby/vim-ruby'     " Ruby support
+Plug 'tpope/vim-endwise'     " Tambah end otomatis untuk blok Ruby
+Plug 'jiangmiao/auto-pairs'  " Auto-close untuk parentheses, brackets, quotes
+Plug 'mattn/emmet-vim'       " Emmet untuk HTML dan CSS
+Plug 'tailwindlabs/tailwindcss-intellisense'  " Tailwind CSS Intellisense
+Plug 'preservim/nerdtree'    " File explorer
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'      " Fuzzy file finder
+Plug 'airblade/vim-gitgutter' " Menampilkan perubahan git di gutter
+Plug 'tpope/vim-fugitive'    " Integrasi Git di Vim
+Plug 'Yggdroot/indentLine'   " Menampilkan garis indentasi
+Plug 'morhetz/gruvbox'       " Warna tema gruvbox
+Plug 'itchyny/lightline.vim' " Status bar yang lebih baik
+Plug 'honza/vim-snippets'    " Snippets collection
+Plug 'morhetz/gruvbox'
+
+" Menyelesaikan proses instalasi
+call plug#end()
+
 " Mengaktifkan nomor baris
 set number
 
@@ -34,30 +58,6 @@ set mouse=a
 " Highlight pencarian dan saat menulis teks
 set hlsearch
 set incsearch
-
-" Inisialisasi vim-plug
-call plug#begin('~/.vim/plugged')
-
-" Daftar plugin yang akan diinstal
-Plug 'tpope/vim-rails'       " Ruby on Rails support
-Plug 'vim-ruby/vim-ruby'     " Ruby support
-Plug 'tpope/vim-endwise'     " Tambah end otomatis untuk blok Ruby
-Plug 'jiangmiao/auto-pairs'  " Auto-close untuk parentheses, brackets, quotes
-Plug 'mattn/emmet-vim'       " Emmet untuk HTML dan CSS
-Plug 'tailwindlabs/tailwindcss-intellisense'  " Tailwind CSS Intellisense
-Plug 'preservim/nerdtree'    " File explorer
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'      " Fuzzy file finder
-Plug 'airblade/vim-gitgutter' " Menampilkan perubahan git di gutter
-Plug 'tpope/vim-fugitive'    " Integrasi Git di Vim
-Plug 'Yggdroot/indentLine'   " Menampilkan garis indentasi
-Plug 'morhetz/gruvbox'       " Warna tema gruvbox
-Plug 'itchyny/lightline.vim' " Status bar yang lebih baik
-Plug 'honza/vim-snippets'    " Snippets collection
-Plug 'morhetz/gruvbox'
-
-" Menyelesaikan proses instalasi
-call plug#end()
 
 colorscheme gruvbox
 nnoremap <C-n> :NERDTreeToggle<CR>
